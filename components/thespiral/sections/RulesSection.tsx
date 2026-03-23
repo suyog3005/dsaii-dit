@@ -4,9 +4,9 @@ import { useEffect, useState } from "react";
 import type { CSSProperties } from "react";
 
 const rules = [
-  "This is a solo event. Each participant must complete all phases independently. Collaboration or team participation is not allowed.",
-  "All progress must be made using the same registered email ID and username. Any mismatch may lead to disqualification.",
-  "Every solution is designed to be derived logically. Random guessing, brute force, or trial-and-error approaches will not work.",
+  "Open only to DIT students.Team formation is your responsibility. Maximum team size: (you decide — 2/3/4).",
+  "All progress must be made using the same registered email ID and username. Every solution is designed to be derived logically.",
+  "Each phase unlocks only after completing the previous one. No manual progression will be provided.",
   "Each clue is part of a larger structure. Do not treat them as isolated problems — patterns and connections matter.",
   "Participants must rely only on their own reasoning. Sharing answers, using others’ solutions, or seeking outside help is strictly prohibited.",
   "Not all instructions will be given. Progress depends on your ability to observe, interpret, and adapt as you move deeper into the spiral.",
