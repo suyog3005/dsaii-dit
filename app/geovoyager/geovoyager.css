@@ -1,0 +1,592 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap");
+
+.geovoyager-root,
+.geovoyager-root * {
+  box-sizing: border-box;
+}
+
+.geovoyager-root {
+  --green: #1a9e75;
+  --green-dark: #0d6e52;
+  --green-glow: #1a9e7533;
+  --green-light: #e1f5ee;
+  --amber: #e8a020;
+  --red: #d94f3d;
+  --bg: #0b0f0e;
+  --bg2: #111916;
+  --bg3: #162019;
+  --surface: #1a2420;
+  --surface2: #1f2d28;
+  --border: rgba(26, 158, 117, 0.18);
+  --text: #edf2f0;
+  --muted: #7a9e90;
+  --dim: #3d5a50;
+  margin: 0;
+  font-family: "DM Sans", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+  line-height: 1.6;
+  min-height: 100vh;
+  position: relative;
+}
+
+.geovoyager-root::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(26, 158, 117, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(26, 158, 117, 0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.geovoyager-root nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2.5rem;
+  background: rgba(11, 15, 14, 0.85);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+}
+
+.geovoyager-root .nav-logo {
+  font-family: "Syne", sans-serif;
+  font-weight: 800;
+  font-size: 1.15rem;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.geovoyager-root .nav-globe {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1.5px solid var(--green);
+  position: relative;
+  overflow: hidden;
+}
+
+.geovoyager-root .nav-globe::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  background: var(--green);
+  left: 50%;
+}
+
+.geovoyager-root .nav-globe::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: var(--green);
+  top: 50%;
+}
+
+.geovoyager-root .nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.geovoyager-root .nav-links a {
+  font-size: 0.85rem;
+  color: var(--muted);
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.geovoyager-root .nav-links a:hover {
+  color: var(--green);
+}
+
+.geovoyager-root .nav-cta {
+  background: var(--green);
+  color: #fff !important;
+  padding: 7px 18px;
+  border-radius: 6px;
+  font-weight: 500;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+  font-size: 0.875rem !important;
+}
+
+.geovoyager-root .hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 7rem 2rem 4rem;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.geovoyager-root .hero-orb {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, rgba(26, 158, 117, 0.12) 0%, transparent 70%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.geovoyager-root .hero-rings {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.geovoyager-root .ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(26, 158, 117, 0.12);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: geovoyager-pulse-ring 4s ease-in-out infinite;
+}
+
+.geovoyager-root .ring:nth-child(1) {
+  width: 300px;
+  height: 300px;
+}
+
+.geovoyager-root .ring:nth-child(2) {
+  width: 500px;
+  height: 500px;
+  animation-delay: 0.8s;
+}
+
+.geovoyager-root .ring:nth-child(3) {
+  width: 720px;
+  height: 720px;
+  animation-delay: 1.6s;
+}
+
+@keyframes geovoyager-pulse-ring {
+  0%,
+  100% { opacity: 0.3; }
+  50% { opacity: 0.7; }
+}
+
+.geovoyager-root .event-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 6px 16px;
+  font-size: 0.78rem;
+  color: var(--green);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.geovoyager-root .event-tag::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--green);
+}
+
+.geovoyager-root .hero h1 {
+  font-family: "Syne", sans-serif;
+  font-weight: 800;
+  font-size: clamp(3.5rem, 9vw, 7.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  margin-bottom: 1rem;
+}
+
+.geovoyager-root .hero h1 span {
+  color: var(--green);
+  display: block;
+}
+
+.geovoyager-root .hero-sub {
+  font-size: 1.05rem;
+  color: var(--muted);
+  max-width: 520px;
+  margin: 0 auto 2.5rem;
+  font-weight: 300;
+}
+
+.geovoyager-root .hero-meta {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.geovoyager-root .meta-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+.geovoyager-root .meta-item strong { color: var(--text); }
+
+.geovoyager-root .meta-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--green);
+}
+
+.geovoyager-root .btn-primary {
+  background: var(--green);
+  color: #fff;
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.15s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.geovoyager-root .btn-primary:hover {
+  background: var(--green-dark);
+  transform: translateY(-2px);
+}
+
+.geovoyager-root section {
+  position: relative;
+  z-index: 1;
+  padding: 6rem 2rem;
+}
+
+.geovoyager-root .container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.geovoyager-root .section-label {
+  font-size: 0.75rem;
+  color: var(--green);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.geovoyager-root .section-label::before {
+  content: "";
+  width: 24px;
+  height: 1px;
+  background: var(--green);
+}
+
+.geovoyager-root .section-title {
+  font-family: "Syne", sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 3rem;
+}
+
+.geovoyager-root .divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 0;
+}
+
+.geovoyager-root .reg-grid,
+.geovoyager-root .scoring-grid {
+  display: grid;
+  gap: 2px;
+  background: var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.geovoyager-root .reg-grid {
+  grid-template-columns: 1fr 1fr;
+}
+
+.geovoyager-root .scoring-grid {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  margin-bottom: 2rem;
+}
+
+.geovoyager-root .reg-card,
+.geovoyager-root .score-card {
+  background: var(--bg2);
+  padding: 2rem;
+}
+
+.geovoyager-root .reg-card:hover { background: var(--surface); }
+
+.geovoyager-root .reg-card-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.geovoyager-root .reg-card h3 {
+  font-family: "Syne", sans-serif;
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+.geovoyager-root .reg-card p,
+.geovoyager-root .round-desc,
+.geovoyager-root .rule-text,
+.geovoyager-root .reminder-desc,
+.geovoyager-root .footer-info {
+  font-size: 0.875rem;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.geovoyager-root .reg-card .highlight {
+  color: var(--green);
+  font-weight: 500;
+}
+
+.geovoyager-root .format-track {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.geovoyager-root .format-track::before {
+  content: "";
+  position: absolute;
+  left: 28px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, var(--green) 0%, var(--amber) 50%, var(--red) 100%);
+}
+
+.geovoyager-root .round-row {
+  display: flex;
+  gap: 1.5rem;
+  padding: 2rem 0;
+  align-items: flex-start;
+}
+
+.geovoyager-root .round-icon {
+  width: 56px;
+  height: 56px;
+  min-width: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Syne", sans-serif;
+  font-weight: 800;
+  font-size: 0.7rem;
+  position: relative;
+  z-index: 2;
+}
+
+.geovoyager-root .round-qualifier .round-icon {
+  background: rgba(26, 158, 117, 0.15);
+  border: 1.5px solid var(--green);
+  color: var(--green);
+}
+
+.geovoyager-root .round-semi .round-icon {
+  background: rgba(232, 160, 32, 0.15);
+  border: 1.5px solid var(--amber);
+  color: var(--amber);
+}
+
+.geovoyager-root .round-final .round-icon {
+  background: rgba(217, 79, 61, 0.15);
+  border: 1.5px solid var(--red);
+  color: var(--red);
+}
+
+.geovoyager-root .round-tb .round-icon {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1.5px solid var(--dim);
+  color: var(--muted);
+}
+
+.geovoyager-root .round-title {
+  font-family: "Syne", sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 6px;
+}
+
+.geovoyager-root .round-qualifier .round-title { color: var(--green); }
+.geovoyager-root .round-semi .round-title { color: var(--amber); }
+.geovoyager-root .round-final .round-title { color: var(--red); }
+.geovoyager-root .round-tb .round-title { color: var(--muted); }
+
+.geovoyager-root .round-pills {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.geovoyager-root .pill {
+  padding: 5px 14px;
+  border-radius: 100px;
+  font-size: 0.78rem;
+  border: 1px solid;
+}
+
+.geovoyager-root .pill-green { border-color: rgba(26, 158, 117, 0.4); color: var(--green); background: rgba(26, 158, 117, 0.08); }
+.geovoyager-root .pill-amber { border-color: rgba(232, 160, 32, 0.4); color: var(--amber); background: rgba(232, 160, 32, 0.08); }
+.geovoyager-root .pill-red { border-color: rgba(217, 79, 61, 0.4); color: var(--red); background: rgba(217, 79, 61, 0.08); }
+.geovoyager-root .pill-dim { border-color: var(--dim); color: var(--muted); background: transparent; }
+
+.geovoyager-root .score-card { text-align: center; }
+.geovoyager-root .score-num {
+  font-family: "Syne", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--green);
+}
+
+.geovoyager-root .score-label {
+  font-size: 0.8rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.geovoyager-root .rules-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.geovoyager-root .rule-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem;
+}
+
+.geovoyager-root .rule-num {
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  border-radius: 50%;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--green);
+  font-family: "Syne", sans-serif;
+}
+
+.geovoyager-root .reminder-banner {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--green);
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.geovoyager-root .reminder-icon {
+  font-size: 1.2rem;
+  min-width: 24px;
+}
+
+.geovoyager-root .reminder-title {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.geovoyager-root footer {
+  background: var(--bg2);
+  border-top: 1px solid var(--border);
+  padding: 3rem 2rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.geovoyager-root .footer-logo {
+  font-family: "Syne", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.geovoyager-root .footer-sub {
+  font-size: 0.82rem;
+  color: var(--dim);
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .geovoyager-root nav {
+    padding: 1rem 1.25rem;
+  }
+
+  .geovoyager-root .nav-links {
+    display: none;
+  }
+
+  .geovoyager-root .reg-grid,
+  .geovoyager-root .scoring-grid,
+  .geovoyager-root .rules-list {
+    grid-template-columns: 1fr;
+  }
+
+  .geovoyager-root section {
+    padding: 4rem 1.25rem;
+  }
+}

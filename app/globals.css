@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ── Hero section ─────────────────────────────────────────────────────────── */
+.hero-section {
+  position: relative;
+  overflow: hidden;
+}
+
+/* ── Hero text animations (moved from HeroSection.tsx <style> tag) ──────── */
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.anim-fade-up { animation: fadeSlideUp 0.85s cubic-bezier(0.22, 1, 0.36, 1) both; }
+.anim-fade    { animation: fadeIn 0.7s ease both; }
+.anim-d1 { animation-delay: 0.05s; }
+.anim-d2 { animation-delay: 0.2s; }
+.anim-d3 { animation-delay: 0.32s; }
+.anim-d4 { animation-delay: 0.48s; }
+
+/* ── Scroll indicator dot ─────────────────────────────────────────────────── */
+@keyframes scrollDot {
+  0%   { top: 0;    opacity: 0.8; }
+  80%  { top: 100%; opacity: 0;   }
+  100% { top: 0;    opacity: 0;   }
+}
+.scroll-dot {
+  animation: scrollDot 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* ── Gradient shift (for any gradient-animated elements) ─────────────────── */
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ── Loading screen spinner ───────────────────────────────────────────────── */
+@keyframes spin-tick {
+  to { transform: rotate(360deg); }
+}
+@keyframes fade-up-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.ls-spinner {
+  animation: spin-tick 1.2s steps(12, end) infinite;
+}
+.ls-word-1 {
+  opacity: 0;
+  animation: fade-up-in 0.7s cubic-bezier(0.22,1,0.36,1) 0.2s forwards;
+}
+.ls-word-2 {
+  opacity: 0;
+  animation: fade-up-in 0.7s cubic-bezier(0.22,1,0.36,1) 0.4s forwards;
+}
+
+/* ── Neon register button ───────────────────────────────────────────── */
+@keyframes neonPulse {
+  0%, 100% { box-shadow: 0 0 6px 1px var(--neon-color, rgba(255,255,255,0.45)),
+                          0 0 18px 2px var(--neon-color, rgba(255,255,255,0.15)); }
+  50%       { box-shadow: 0 0 12px 3px var(--neon-color, rgba(255,255,255,0.7)),
+                          0 0 32px 6px var(--neon-color, rgba(255,255,255,0.25)); }
+}
+.neon-btn {
+  --neon-color: rgba(255,255,255,0.55);
+  padding: 0.55em 1.6em;
+  border: 1.5px solid var(--neon-color);
+  color: white;
+  background-color: rgba(255,255,255,0.06);
+  border-radius: 0.35em;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  transition: background 0.25s, box-shadow 0.25s;
+  animation: neonPulse 2.4s ease-in-out infinite;
+  backdrop-filter: blur(4px);
+}
+.neon-btn:hover {
+  background-color: rgba(255,255,255,0.14);
+  box-shadow: 0 0 18px 4px var(--neon-color),
+              0 0 40px 8px var(--neon-color);
+}
+.neon-btn:active {
+  background-color: rgba(255,255,255,0.22);
+  transform: scale(0.97);
+}
+
+/* ── Mobile nav arrow idle flicker ───────────────────────────────────────── */
+@keyframes navArrowFlicker {
+  0%, 100% { opacity: 0.6; }
+  40%       { opacity: 1;   }
+  60%       { opacity: 0.2; }
+  80%       { opacity: 1;   }
+}
+.nav-arrow-flicker {
+  animation: navArrowFlicker 1.4s ease-in-out infinite;
+}
