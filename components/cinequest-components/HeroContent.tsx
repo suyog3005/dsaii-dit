@@ -13,7 +13,7 @@ export function HeroContent() {
 
   return (
     <>
-      <div style={{ position: "relative", inset: 0, zIndex: 30, height: "100vh", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", pointerEvents: "none", paddingBottom: "9vh" }}>
+      <div style={{ position: "relative", inset: 0, zIndex: 30, minHeight: "100vh", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", pointerEvents: "none", paddingBottom: "9vh" }}>
         <motion.div initial={{ opacity: 0, letterSpacing: "0.1em" }} animate={{ opacity: 1, letterSpacing: "0.52em" }} transition={{ delay: .6, duration: 1.9 }} style={{ fontFamily: "'Cormorant Garamond',serif", fontSize: "clamp(9px,1vw,12px)", fontStyle: "italic", fontWeight: 300, color: "rgba(198,180,148,.50)", marginBottom: "16px" }}>THE ULTIMATE CINEPHILE CHALLENGE</motion.div>
 
         <motion.div initial={{ scaleX: 0 }} animate={{ scaleX: 1 }} transition={{ delay: 1.2, duration: 1.7, ease: "easeInOut" }} style={{ width: "200px", height: "0.5px", marginBottom: "20px", background: "linear-gradient(to right,transparent,rgba(255,195,75,.72),transparent)" }} />

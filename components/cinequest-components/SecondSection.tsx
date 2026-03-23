@@ -12,11 +12,11 @@ export default function SecondSection() {
   return (
     <div
       style={{
-        height: "100vh",
+        minHeight: "100vh",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        padding: "0 10%",
+        padding: "10vh 10%",
         position: "relative",
         zIndex: 50,
         background: "transparent",
