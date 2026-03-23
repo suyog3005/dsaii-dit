@@ -15,7 +15,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const REGISTER_URL = "https://dsaii-submission.vercel.app/";
+const REGISTER_URL = "https://dsaii-submission2.vercel.app/";
 
 export default function InnovexPage() {
   const [codeFragments, setCodeFragments] = useState<
@@ -145,7 +145,7 @@ export default function InnovexPage() {
                     <div className="glass-panel px-6 py-3 rounded-lg hover-glow flex items-center gap-3">
                       <Calendar className="w-5 h-5 text-cyan-300" />
                       <span className="text-white font-mono">
-                        3 APR, 2026
+                        4 APR, 2026
                       </span>
                     </div>
 
@@ -469,7 +469,7 @@ export default function InnovexPage() {
                   </span>
                 </h2>
                 <p className="text-xl text-slate-400">
-                  3rd April 2026 - From 10 AM to 6 PM
+                  4th April 2026 - From 10 AM to 6 PM
                 </p>
               </div>
 

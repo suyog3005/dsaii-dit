@@ -19,6 +19,8 @@ export default function InfoSection() {
               <li>Outer Layer → Clear answers, direct observation</li>
               <li>Inner Layer → Connected thinking, hidden relationships</li>
               <li>Center → Structure, interpretation, and precision</li>
+              <br />
+              <li>Single Prize of ₹10,000</li>
             </ul>
           </div>
           </div>

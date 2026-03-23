@@ -62,12 +62,12 @@ const highlights: Highlight[] = [
   {
     icon: "🏆",
     title: "Big Prize Pool",
-    text: "Compete for prizes up to ₹10,000 by showcasing originality, relevance, and strong execution.",
+    text: "Compete for prizes up to ₹5,000 by showcasing originality, relevance, and strong execution.",
   },
 ];
 
 const timeline: TimelineItem[] = [
-  { step: "01", phase: "Event Day", name: "CONTENTFLUX Challenge (Offline)", date: "5 April 2026" },
+  { step: "01", phase: "Event Day", name: "CONTENTFLUX Challenge (Offline)", date: "3 April 2026" },
 ];
 
 const rules: string[] = [
@@ -87,10 +87,10 @@ const modalList: string[] = [
   "Event: CONTENTFLUX - AI Video Generation Challenge",
   "Team size: 2 members only",
   "Mode: Offline",
-  "Date: 5 April 2026",
+  "Date: 3 April 2026",
   "Entry fee: ₹149 per team",
   "Submission: Final video only",
-  "Prize pool: Up to ₹10,000",
+  "Prize pool: Up to ₹5,000",
 ];
 
 const eventSignals: EventSignal[] = [
@@ -100,7 +100,7 @@ const eventSignals: EventSignal[] = [
   { icon: "🏆", value: "₹10,000", label: "Prize Pool" },
 ];
 
-const REGISTER_URL = "https://dsaii-submission.vercel.app/";
+const REGISTER_URL = "https://dsaii-submission2.vercel.app/";
 
 export default function ContentfluxPage() {
   const [showModal, setShowModal] = useState(false);
@@ -245,7 +245,7 @@ export default function ContentfluxPage() {
               ["2", "Members per Team"],
               ["Offline", "Mode Only"],
               ["Any", "AI Tools Allowed"],
-              ["₹10,000", "Prize Pool Up To"],
+              ["₹5,000", "Prize Pool Up To"],
             ].map(([num, label]) => (
               <div key={label} className="neon-panel stat-card px-6 py-8 text-center transition hover:-translate-y-1 hover:border-cyan">
                 <div className="font-head text-4xl font-black text-cyan drop-shadow-[0_0_12px_#00fff7]">{num}</div>
@@ -311,7 +311,7 @@ export default function ContentfluxPage() {
             <article className="neon-panel jackpot-card px-6 py-12 text-center">
               <div className="text-5xl">🏆</div>
               <h3 className="font-head mt-5 text-base font-extrabold uppercase tracking-[0.12em] text-yellow">Total Prize Pool</h3>
-              <p className="font-head mt-4 text-5xl font-black text-white">Up to ₹10,000</p>
+              <p className="font-head mt-4 text-5xl font-black text-white">Up to ₹5,000</p>
               <p className="font-mono mt-3 text-xs uppercase tracking-[0.12em] text-slate-400">Final category-wise distribution will be announced on event day</p>
             </article>
           </div>
@@ -348,7 +348,7 @@ export default function ContentfluxPage() {
       <footer className="reveal-section relative z-10 border-t border-white/10 px-6 py-10 text-center" data-reveal style={{ "--reveal-delay": "80ms" } as RevealStyle}>
         <p className="font-mono text-xs uppercase tracking-[0.12em] text-slate-500">CONTENTFLUX OFFICIAL</p>
         <p className="font-mono mt-2 text-xs uppercase tracking-[0.12em] text-slate-500">
-          AI Video Generation Challenge - Offline Event - 5 April 2026
+          AI Video Generation Challenge - Offline Event - 3 April 2026
         </p>
       </footer>
 

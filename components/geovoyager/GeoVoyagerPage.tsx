@@ -1,4 +1,4 @@
-const REGISTER_URL = "https://dsaii-submission.vercel.app/";
+const REGISTER_URL = "https://dsaii-submission2.vercel.app/";
 
 export default function GeoVoyagerPage() {
   return (
@@ -50,7 +50,7 @@ export default function GeoVoyagerPage() {
           <div className="meta-item">
             <div className="meta-dot" />
             <span>
-              <strong>April 4, 2026</strong> - Morning Session
+              <strong>April 5, 2026</strong> - Morning Session
             </span>
           </div>
           <div className="meta-item">
@@ -60,6 +60,10 @@ export default function GeoVoyagerPage() {
           <div className="meta-item">
             <div className="meta-dot" />
             <span>₹149 per team</span>
+          </div>
+          <div className="meta-item">
+            <div className="meta-dot" />
+            <span>₹5000 Prize Pool</span>
           </div>
         </div>
 
@@ -106,7 +110,7 @@ export default function GeoVoyagerPage() {
               <h3>GeoGuessr Account</h3>
               <p>
                 Create a <span className="highlight">free account at geoguessr.com</span>
-                before April 4. Set your display name to your exact registered team
+                before April 5. Set your display name to your exact registered team
                 name.
               </p>
             </div>
@@ -330,7 +334,7 @@ export default function GeoVoyagerPage() {
               <div className="rule-num">10</div>
               <div className="rule-text">
                 <strong style={{ color: "var(--text)" }}>Create your GeoGuessr account</strong>
-                before April 4. Account setup on event day is not guaranteed.
+                before April 5. Account setup on event day is not guaranteed.
               </div>
             </div>
           </div>
@@ -348,7 +352,7 @@ export default function GeoVoyagerPage() {
             <div className="reminder-icon">🌍</div>
             <div>
               <div className="reminder-title">
-                Create your GeoGuessr account before April 4
+                Create your GeoGuessr account before April 5
               </div>
               <div className="reminder-desc">
                 Visit geoguessr.com and create a free account. Set your display name
@@ -387,7 +391,7 @@ export default function GeoVoyagerPage() {
         <div className="footer-logo">GeoVoyager</div>
         <div className="footer-sub">Technovation 4.0 - Mirai · DSAII Club 🌍</div>
         <div className="footer-info">
-          <strong>April 4, 2026</strong> - Morning Session
+          <strong>April 5, 2026</strong> - Morning Session
           <br />
           DY Patil Institute of Technology, Pimpri
           <br />

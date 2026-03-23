@@ -6,7 +6,7 @@ import FandomTitle from "./FandomTitle";
 import GlassHUD from "./GlassHUD";
 import SecondSection from "./SecondSection";
 
-const REGISTER_URL = "https://dsaii-submission.vercel.app/";
+const REGISTER_URL = "https://dsaii-submission2.vercel.app/";
 
 export function HeroContent() {
   const [btnHot, setBtnHot] = useState(false);

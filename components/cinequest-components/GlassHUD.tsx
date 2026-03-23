@@ -4,9 +4,9 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 const HUD_DATA = [
-  { label:"PRIZE POOL", val:"₹15K",   color:"#ff2828", glow:"rgba(255,35,35,0.7)" },
+  { label:"PRIZE POOL", val:"₹10K",   color:"#ff2828", glow:"rgba(255,35,35,0.7)" },
   { label:"ROUNDS",     val:"03",     color:"#2288ff", glow:"rgba(25,130,255,0.7)" },
-  { label:"DATE",       val:"APR 04", color:"#ff9500", glow:"rgba(255,145,0,0.65)" },
+  { label:"DATE",       val:"APR 05", color:"#ff9500", glow:"rgba(255,145,0,0.65)" },
   { label:"VENUE",      val:"DIT",   color:"#aa2ff0", glow:"rgba(155,40,240,0.65)" },
 ];
 export default function GlassHUD() {

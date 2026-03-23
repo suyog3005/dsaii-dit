@@ -55,9 +55,9 @@ Rounds include:
           },
           {
             title: "EVENT DETAILS",
-            text: `📅 Date: 4 April 2026
+            text: `📅 Date: 5 April 2026
 💰 Entry Fee: ₹299 per team
-🏆 Prize Pool: Up to ₹15,000
+🏆 Prize Pool: Up to ₹10,000
 
 Round-wise eliminations leading to final winners announcement.`,
           },
