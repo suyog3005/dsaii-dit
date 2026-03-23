@@ -63,7 +63,7 @@ export default function GeoVoyagerPage() {
           </div>
           <div className="meta-item">
             <div className="meta-dot" />
-            <span>₹5000 Prize Pool</span>
+            <span>₹6000 Prize Pool</span>
           </div>
         </div>
 

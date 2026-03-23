@@ -169,8 +169,8 @@ export default function HeroSection() {
                  of the Department of Artificial Intelligence and Data Science at Dr.
                   D. Y. Patil Institute of Technology, Pimpri, Pune proudly presents 
                   Technovation 4.0, the flagship event of the department. This event 
-                  aims to promote innovation, technical excellence, and analytical t
-                  hinking by providing a platform for students to showcase their skills
+                  aims to promote innovation, technical excellence, and analytical 
+                  thinking by providing a platform for students to showcase their skills
                    and engage in meaningful competition.
               </p>
               <button

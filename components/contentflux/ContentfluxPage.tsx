@@ -62,7 +62,7 @@ const highlights: Highlight[] = [
   {
     icon: "🏆",
     title: "Big Prize Pool",
-    text: "Compete for prizes up to ₹5,000 by showcasing originality, relevance, and strong execution.",
+    text: "Compete for prizes up to ₹6,000 by showcasing originality, relevance, and strong execution.",
   },
 ];
 
@@ -90,14 +90,14 @@ const modalList: string[] = [
   "Date: 3 April 2026",
   "Entry fee: ₹149 per team",
   "Submission: Final video only",
-  "Prize pool: Up to ₹5,000",
+  "Prize pool: Up to ₹6,000",
 ];
 
 const eventSignals: EventSignal[] = [
   { icon: "👥", value: "2 Members", label: "Per Team" },
   { icon: "📍", value: "Offline", label: "Mode" },
   { icon: "🎟", value: "₹149", label: "Entry Fee" },
-  { icon: "🏆", value: "₹10,000", label: "Prize Pool" },
+  { icon: "🏆", value: "₹6,000", label: "Prize Pool" },
 ];
 
 const REGISTER_URL = "https://dsaii-submission2.vercel.app/";
@@ -245,7 +245,7 @@ export default function ContentfluxPage() {
               ["2", "Members per Team"],
               ["Offline", "Mode Only"],
               ["Any", "AI Tools Allowed"],
-              ["₹5,000", "Prize Pool Up To"],
+              ["₹6,000", "Prize Pool Up To"],
             ].map(([num, label]) => (
               <div key={label} className="neon-panel stat-card px-6 py-8 text-center transition hover:-translate-y-1 hover:border-cyan">
                 <div className="font-head text-4xl font-black text-cyan drop-shadow-[0_0_12px_#00fff7]">{num}</div>
@@ -311,7 +311,7 @@ export default function ContentfluxPage() {
             <article className="neon-panel jackpot-card px-6 py-12 text-center">
               <div className="text-5xl">🏆</div>
               <h3 className="font-head mt-5 text-base font-extrabold uppercase tracking-[0.12em] text-yellow">Total Prize Pool</h3>
-              <p className="font-head mt-4 text-5xl font-black text-white">Up to ₹5,000</p>
+              <p className="font-head mt-4 text-5xl font-black text-white">Up to ₹6,000</p>
               <p className="font-mono mt-3 text-xs uppercase tracking-[0.12em] text-slate-400">Final category-wise distribution will be announced on event day</p>
             </article>
           </div>
