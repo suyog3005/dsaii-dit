@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-const REGISTER_URL = "https://dsaii-submission2.vercel.app/";
+const REGISTER_URL = "https://engg.dypvp.edu.in/dsaii-registrations.aspx";
 
 export default function HeroSection() {
   return (

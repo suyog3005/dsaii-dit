@@ -100,7 +100,7 @@ const eventSignals: EventSignal[] = [
   { icon: "🏆", value: "₹6,000", label: "Prize Pool" },
 ];
 
-const REGISTER_URL = "https://dsaii-submission2.vercel.app/";
+const REGISTER_URL = "https://engg.dypvp.edu.in/dsaii-registrations.aspx";
 
 export default function ContentfluxPage() {
   const [showModal, setShowModal] = useState(false);

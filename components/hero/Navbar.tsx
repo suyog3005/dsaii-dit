@@ -116,7 +116,7 @@ export default function Navbar() {
               </div>
             )}
           </div>
-           <a href="https://dsaii-submission2.vercel.app/"
+           <a href="https://engg.dypvp.edu.in/dsaii-registrations.aspx"
              className="relative overflow-hidden px-5 py-2
                         text-[0.82rem] font-medium tracking-widest uppercase
                         text-white transition-all duration-300 hover:text-black group"
@@ -131,7 +131,7 @@ export default function Navbar() {
 
         {/* ── Mobile right: Register + Hamburger ── */}
         <div className="flex md:hidden items-center gap-3">
-           <a href="https://dsaii-submission2.vercel.app/"
+           <a href="https://engg.dypvp.edu.in/dsaii-registrations.aspx"
              className="relative overflow-hidden px-3 py-1
                         text-[0.65rem] font-medium tracking-widest uppercase
                         text-white transition-all duration-300 hover:text-black group"

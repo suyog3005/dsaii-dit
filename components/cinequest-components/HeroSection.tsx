@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import FandomTitle from "./FandomTitle";
 import GlassHUD from "./GlassHUD";
 
-const REGISTER_URL = "https://dsaii-submission2.vercel.app/";
+const REGISTER_URL = "https://engg.dypvp.edu.in/dsaii-registrations.aspx";
 
 export function HeroSection({
   btnHot,
