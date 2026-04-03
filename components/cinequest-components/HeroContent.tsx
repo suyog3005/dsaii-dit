@@ -6,7 +6,7 @@ import FandomTitle from "./FandomTitle";
 import GlassHUD from "./GlassHUD";
 import SecondSection from "./SecondSection";
 
-const REGISTER_URL = "https://engg.dypvp.edu.in/dsaii-registrations.aspx";
+const REGISTER_URL = "https://forms.gle/Krxn8JrbbVwUHWSz7";
 
 export function HeroContent() {
   const [btnHot, setBtnHot] = useState(false);

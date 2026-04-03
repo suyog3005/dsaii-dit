@@ -15,7 +15,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const REGISTER_URL = "https://engg.dypvp.edu.in/dsaii-registrations.aspx";
+const REGISTER_URL = "https://forms.gle/Krxn8JrbbVwUHWSz7";
 
 export default function InnovexPage() {
   const [codeFragments, setCodeFragments] = useState<

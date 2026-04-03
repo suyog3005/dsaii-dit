@@ -2,8 +2,7 @@
 
 import { motion } from "framer-motion";
 
-const REGISTER_URL = "https://engg.dypvp.edu.in/dsaii-registrations.aspx";
-
+const REGISTER_URL = "https://forms.gle/Krxn8JrbbVwUHWSz7";
 export default function HeroSection() {
   return (
     <section id="home" className="event-section hero-section">
