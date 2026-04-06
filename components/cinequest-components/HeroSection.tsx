@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import FandomTitle from "./FandomTitle";
 import GlassHUD from "./GlassHUD";
 
-const REGISTER_URL = "https://forms.gle/Krxn8JrbbVwUHWSz7";
+const REGISTER_URL = "/reg-closed";
 
 export function HeroSection({
   btnHot,
@@ -90,7 +90,7 @@ export function HeroSection({
           style={{ display: "flex", justifyContent: "center" }}
         >
           <motion.button
-            onClick={() => window.open(REGISTER_URL, "_blank", "noopener,noreferrer")}
+            onClick={() => window.location.href = REGISTER_URL}
             onMouseEnter={() => setBtnHot(true)}
             onMouseLeave={() => setBtnHot(false)}
             whileHover={{ scale: 1.05 }}

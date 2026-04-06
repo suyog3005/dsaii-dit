@@ -15,7 +15,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const REGISTER_URL = "https://forms.gle/Krxn8JrbbVwUHWSz7";
+const REGISTER_URL = "/reg-closed";
 
 export default function InnovexPage() {
   const [codeFragments, setCodeFragments] = useState<
@@ -169,7 +169,7 @@ export default function InnovexPage() {
                     <Button
                       type="button"
                       size="lg"
-                      onClick={() => window.open(REGISTER_URL, "_blank", "noopener,noreferrer")}
+                      onClick={() => window.location.href = REGISTER_URL}
                       className="relative bg-gradient-to-r from-cyan-600 to-violet-600 hover:from-cyan-500 hover:to-violet-500 text-white px-8 py-6 text-lg font-bold border-0 hover-glow group overflow-hidden"
                     >
                       <span className="relative z-10 flex items-center gap-2">

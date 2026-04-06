@@ -1,4 +1,4 @@
-const REGISTER_URL = "https://forms.gle/Krxn8JrbbVwUHWSz7";
+const REGISTER_URL = "/reg-closed";
 
 export default function GeoVoyagerPage() {
   return (
@@ -19,7 +19,7 @@ export default function GeoVoyagerPage() {
             <a href="#rules">Rules</a>
           </li>
           <li>
-            <a href={REGISTER_URL} className="nav-cta" target="_blank" rel="noreferrer">
+            <a href={REGISTER_URL} className="nav-cta">
               Register
             </a>
           </li>
@@ -70,8 +70,6 @@ export default function GeoVoyagerPage() {
         <div className="hero-btns">
           <a
             href={REGISTER_URL}
-            target="_blank"
-            rel="noreferrer"
             className="btn-primary"
           >
             Register Now -&gt;

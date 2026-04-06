@@ -6,7 +6,7 @@ import FandomTitle from "./FandomTitle";
 import GlassHUD from "./GlassHUD";
 import SecondSection from "./SecondSection";
 
-const REGISTER_URL = "https://forms.gle/Krxn8JrbbVwUHWSz7";
+const REGISTER_URL = "/reg-closed";
 
 export function HeroContent() {
   const [btnHot, setBtnHot] = useState(false);
@@ -29,7 +29,7 @@ export function HeroContent() {
 
           <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 3.0, duration: 1.0 }} style={{ display: "flex", justifyContent: "center" }}>
             <motion.button
-              onClick={() => window.open(REGISTER_URL, "_blank", "noopener,noreferrer")}
+              onClick={() => window.location.href = REGISTER_URL}
               onMouseEnter={() => setBtnHot(true)}
               onMouseLeave={() => setBtnHot(false)}
               whileHover={{ scale: 1.05 }}

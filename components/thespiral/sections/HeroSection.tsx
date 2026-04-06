@@ -1,9 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 
-const REGISTER_URL = "https://forms.gle/Krxn8JrbbVwUHWSz7";
 export default function HeroSection() {
+  const router = useRouter();
   return (
     <section id="home" className="event-section hero-section">
       <div className="section-container hero-content">
@@ -43,7 +44,7 @@ export default function HeroSection() {
           <button
             type="button"
             className="hero-register-btn"
-            onClick={() => window.open(REGISTER_URL, "_blank", "noopener,noreferrer")}
+            onClick={() => router.push("/reg-closed")}
           >
             Register Now
           </button>

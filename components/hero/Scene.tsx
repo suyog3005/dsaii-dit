@@ -234,13 +234,13 @@ function ColorLerper({
 function RegisterBtn({ route }: { route?: string }) {
   const emitPrefetch = () => {
     window.dispatchEvent(
-      new CustomEvent("prefetch-route", { detail: route ?? "/" })
+      new CustomEvent("prefetch-route", { detail: "/reg-closed" })
     )
   }
 
   const handleClick = () => {
     window.dispatchEvent(
-      new CustomEvent("navigate-to", { detail: route ?? "/" })
+      new CustomEvent("navigate-to", { detail: "/reg-closed" })
     )
   }
 
